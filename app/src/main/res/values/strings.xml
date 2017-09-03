@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">"Arctic Circle"</string>
+    <string name="refresh">"Refresh"</string>
+    <string name="network_error">"Network Error"</string>
+</resources>

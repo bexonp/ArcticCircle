@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                tools:context="io.github.bexonp.arcticcircle.adapter.DataAdapter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="28dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="28dp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="14sp"
+                android:typeface="serif"
+                tools:ignore="RelativeOverlap"
+                tools:text="Date"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/date"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:ellipsize="marquee"
+                android:fontFamily="sans-serif"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:textColor="#353535"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                tools:text="标题"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/shotLine"
+            android:layout_below="@+id/head"
+            android:layout_width="28dp"
+            android:layout_height="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:background="#353535"/>
+
+        <TextView
+            android:id="@+id/excerpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/shotLine"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLines="3"
+            android:textColor="#555"
+            android:textSize="16sp"
+            android:typeface="sans"
+            tools:text="简介"/>
+    </RelativeLayout>
+
+</RelativeLayout>
