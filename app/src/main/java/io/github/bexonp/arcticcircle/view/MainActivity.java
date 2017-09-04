@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
     private String json;
     private ListView listView;
     private ArrayList<Data> listuser;
-    private Intent intent;
     private Toolbar toolbar;
     private SwipeRefreshLayout swipeRefreshLayout;
     private String RootURL = "https://bexonp.github.io";
@@ -55,12 +54,11 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        menu();
         checkVersion();
         //点击事件
-        intent = new Intent(MainActivity.this, ContentView.class);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> paren, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, ContentView.class);
                 intent.putExtra("title", listuser.get(position).getTitle());
                 intent.putExtra("url", RootURL + listuser.get(position).getUrl());
                 intent.putExtra("author", listuser.get(position).getAuthor());
@@ -78,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
                                     }
                                 }
         );
+        menu();
     }
 
     private void menu() {
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.about_item:
-                        intent = new Intent(MainActivity.this, AboutActivity.class);
+                        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                         startActivity(intent);
                         break;
                 }
