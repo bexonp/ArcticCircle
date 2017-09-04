@@ -6,11 +6,15 @@ import android.os.Environment;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
+import android.widget.Toast;
 
 import com.allenliu.versionchecklib.core.AllenChecker;
 import com.allenliu.versionchecklib.core.VersionParams;
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
     private ListView listView;
     private ArrayList<Data> listuser;
     private Intent intent;
+    private Toolbar toolbar;
     private SwipeRefreshLayout swipeRefreshLayout;
     private String RootURL = "https://bexonp.github.io";
 
@@ -47,6 +52,10 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         listView = (ListView) findViewById(R.id.mainList);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+        menu();
         checkVersion();
         //点击事件
         intent = new Intent(MainActivity.this, ContentView.class);
@@ -69,7 +78,27 @@ public class MainActivity extends AppCompatActivity implements OnRefreshListener
                                     }
                                 }
         );
+    }
 
+    private void menu() {
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.about_item:
+                        intent = new Intent(MainActivity.this, AboutActivity.class);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
+            }
+        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     private void checkVersion() {

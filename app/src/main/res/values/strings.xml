@@ -2,4 +2,8 @@
     <string name="app_name">"Arctic Circle"</string>
     <string name="refresh">"Refresh"</string>
     <string name="network_error">"Network Error"</string>
+    <string name="about">"about"</string>
+    <string name="about_written_by_bexon">"Written by Bexon"</string>
+    <string name="about_date">"August 23, 2017"</string>
+    <string name="sorry">"Sorry, you can't do this."</string>
 </resources>

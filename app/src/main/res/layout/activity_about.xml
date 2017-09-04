@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="false"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/abouttitlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/aboutauthor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/aboutauthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="serif"
+                    android:text="@string/about_written_by_bexon"
+                    android:textColor="#aaa"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/aboutdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutauthor_name"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="serif"
+                android:paddingBottom="30dp"
+                android:paddingTop="5dp"
+                android:text="@string/about_date"
+                android:textColor="#aaa"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/abouttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutdate"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="20dp"
+                android:text="About"
+                android:textColor="#353535"
+                android:textSize="64sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
+
+            <View
+                android:id="@+id/aboutblackLine"
+                android:layout_width="58dp"
+                android:layout_height="6dp"
+                android:layout_below="@+id/abouttitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="36dp"/>
+
+            <TextView
+                android:id="@+id/aboutcontentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/aboutblackLine"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingBottom="48dp"
+                android:paddingLeft="36dp"
+                android:paddingRight="36dp"
+                android:paddingTop="8dp"
+                android:autoLink="email|phone|web"
+                android:text="这里是Bexon的个人博客，会在这里写写文什么的，如果你感兴趣就留下来多看看，如果不感兴趣也没什么关系，你自己舒适就好。😘\n\n联系方式 :\n如果你也想post文，可以给我发邮件 → bexon@mail.com \n祝你生活愉快～😉\n\n开源:\nhttps://github.com/bexonp/ArcticCircle/releases \n\n本站文章所有权归作者所有，未得准许不得随意复制、转载、二次修改、商业化。"
+                android:textColor="#555"
+                android:textColorLink="#ffc83d"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

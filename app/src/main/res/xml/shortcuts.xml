@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/about_icon"
+        android:shortcutDisabledMessage="@string/sorry"
+        android:shortcutId="static"
+        android:shortcutLongLabel="@string/about"
+        android:shortcutShortLabel="@string/about">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="io.github.bexonp.arcticcircle.view.AboutActivity"
+            android:targetPackage="io.github.bexonp.arcticcircle" />
+    </shortcut>
+</shortcuts>

@@ -3,4 +3,8 @@
     <string name="app_name">北极圈</string>
     <string name="refresh">刷新</string>
     <string name="network_error">网络好像出问题了……😥</string>
+    <string name="about">关于</string>
+    <string name="about_written_by_bexon">Written by Bexon</string>
+    <string name="about_date">August 23, 2017</string>
+    <string name="sorry">\"Sorry, you can\'t do this.\"</string>
 </resources>

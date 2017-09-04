@@ -3,36 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:elevation="0dp"
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:paddingTop="14dp"
-        android:id="@+id/mainHeaderLayout"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/toolbar_title"
+            android:text="@string/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="@string/app_name"
-            android:textColor="#555"
-            android:textSize="24sp"
+            android:layout_gravity="center"
             android:textStyle="bold"
-            tools:text="@string/app_name"/>
+            android:textColor="#555"
+            android:textSize="24sp" />
 
-    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
     <View
         android:id="@+id/mainTitleLine"
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:layout_below="@+id/mainHeaderLayout"
+        android:layout_below="@+id/toolbar"
         android:background="#dadada"/>
 
     <android.support.v4.widget.SwipeRefreshLayout
